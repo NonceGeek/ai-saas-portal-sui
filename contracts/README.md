@@ -1,6 +1,6 @@
 # AI SaaS SUI Smart Contract
 
-> https://suiscan.xyz/testnet/object/0x3bd42c6aeaf10e81182d2a006c6d0c614c8017733475ea467a599a3536ed1f04/tx-blocks
+> https://suiscan.xyz/testnet/object/0x2fe222b72d0d1b09a635ba733aa023a752bf4beec007e1bc0e24c5f86619f31b/tx-blocks
 
 Bash Command:
 
@@ -24,49 +24,49 @@ Here are the Sui client commands for all the entry functions in your ai-saas mod
 
 ### 1. create_task
 ```bash
-sui client call --package 0x3bd42c6aeaf10e81182d2a006c6d0c614c8017733475ea467a599a3536ed1f04 --module ai_saas --function create_task \
+sui client call --package 0x2fe222b72d0d1b09a635ba733aa023a752bf4beec007e1bc0e24c5f86619f31b --module ai_saas --function create_task \
   --args "<AGENT_ID>" "Write a blog post about Sui" "content_creation" 100 \
   --gas-budget 10000000
 ```
 
 ### 2. assign_task
 ```bash
-sui client call --package 0x3bd42c6aeaf10e81182d2a006c6d0c614c8017733475ea467a599a3536ed1f04 --module ai_saas --function assign_task \
+sui client call --package 0x2fe222b72d0d1b09a635ba733aa023a752bf4beec007e1bc0e24c5f86619f31b --module ai_saas --function assign_task \
   --args "<TASK_OBJECT_ID>" "<AGENT_OBJECT_ID>" \
   --gas-budget 10000000
 ```
 
 ### 3. cancel_task
 ```bash
-sui client call --package 0x3bd42c6aeaf10e81182d2a006c6d0c614c8017733475ea467a599a3536ed1f04 --module ai_saas --function cancel_task \
+sui client call --package 0x2fe222b72d0d1b09a635ba733aa023a752bf4beec007e1bc0e24c5f86619f31b --module ai_saas --function cancel_task \
   --args "<TASK_OBJECT_ID>" \
   --gas-budget 10000000
 ```
 
 ### 4. solve_task
 ```bash
-sui client call --package 0x3bd42c6aeaf10e81182d2a006c6d0c614c8017733475ea467a599a3536ed1f04 --module ai_saas --function solve_task \
+sui client call --package 0x2fe222b72d0d1b09a635ba733aa023a752bf4beec007e1bc0e24c5f86619f31b --module ai_saas --function solve_task \
   --args "<TASK_OBJECT_ID>" "Here is the completed solution..." "<AGENT_OBJECT_ID>" \
   --gas-budget 10000000
 ```
 
 ### 5. pay_for_task
 ```bash
-sui client call --package 0x3bd42c6aeaf10e81182d2a006c6d0c614c8017733475ea467a599a3536ed1f04 --module ai_saas --function pay_for_task \
+sui client call --package 0x2fe222b72d0d1b09a635ba733aa023a752bf4beec007e1bc0e24c5f86619f31b --module ai_saas --function pay_for_task \
   --args "<TASK_OBJECT_ID>" "<AGENT_OBJECT_ID>" "<COIN_OBJECT_ID>" \
   --gas-budget 10000000
 ```
 
 ### 6. create_agent
 ```bash
-sui client call --package 0x3bd42c6aeaf10e81182d2a006c6d0c614c8017733475ea467a599a3536ed1f04 --module ai_saas --function create_agent \
+sui client call --package 0x2fe222b72d0d1b09a635ba733aa023a752bf4beec007e1bc0e24c5f86619f31b --module ai_saas --function create_agent \
   --args "Claude" "AI assistant for writing tasks" "text" "https://api.anthropic.com" "https://claude.ai" \
   --gas-budget 10000000
 ```
 
 ### 7. update_agent
 ```bash
-sui client call --package 0x3bd42c6aeaf10e81182d2a006c6d0c614c8017733475ea467a599a3536ed1f04 --module ai_saas --function update_agent \
+sui client call --package 0x2fe222b72d0d1b09a635ba733aa023a752bf4beec007e1bc0e24c5f86619f31b --module ai_saas --function update_agent \
   --args "<AGENT_OBJECT_ID>" "Updated Name" "Updated Description" "updated_type" "https://new-api-url.com" "https://new-chat-url.com" \
   --gas-budget 10000000
 ```
@@ -77,7 +77,7 @@ sui client call --package 0x3bd42c6aeaf10e81182d2a006c6d0c614c8017733475ea467a59
 2. For string arguments with spaces, keep the quotes
 3. For `solve_task` with long solutions, you can use a file:
    ```bash
-   sui client call --package 0x3bd42c6aeaf10e81182d2a006c6d0c614c8017733475ea467a599a3536ed1f04 --module ai_saas --function solve_task \
+   sui client call --package 0x2fe222b72d0d1b09a635ba733aa023a752bf4beec007e1bc0e24c5f86619f31b --module ai_saas --function solve_task \
      --args "<TASK_OBJECT_ID>" @solution.txt "<AGENT_OBJECT_ID>" \
      --gas-budget 10000000
    ```
