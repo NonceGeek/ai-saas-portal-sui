@@ -1,0 +1,11 @@
+[package]
+name = "ai-saas"
+version = "0.0.2"
+edition = "2024.beta"
+
+[dependencies]
+Sui = { local = "../../../crates/sui-framework/packages/sui-framework" }
+# Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+
+[addresses]
+my_addr = "0x0"
